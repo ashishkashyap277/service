@@ -1,0 +1,28 @@
+<ion-view  view-title="Register" name="register-view">
+    <ion-content class="padding" scroll="false">
+        <section  class="login-container">
+			<div class = "col header text-center">
+               <img src="./img/icon.png" class = "logo" />
+            </div>
+			<div class="list list-inset">
+				<label class="item item-input">
+					<input type="text" placeholder="Full Name" ng-model="data.userfullname">
+				</label>
+				<label class="item item-input">
+					<input type="text" placeholder="Mobile No." ng-model="data.mobile">
+				</label>
+				<label class="item item-input">
+					<input type="password" placeholder="Password" ng-model="data.password">
+				</label>
+				<label class="item item-input">
+					<input type="password" placeholder="Confirm Password" ng-model="data.cpassword">
+				</label>
+			</div>
+			<button class="button button-block button-calm" ng-click="login()">Register</button>
+			
+			<div class = "col text-center">
+                Already have an account? <strong><a href="#login">Login now!</a></strong>
+            </div>
+        </section>
+    </ion-content>
+</ion-view>

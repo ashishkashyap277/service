@@ -1,0 +1,61 @@
+<ion-view view-title="Account">
+  <ion-content>
+    <ion-list>
+		<ion-toggle  ng-controller="ServicesCtrl"  ng-model="testToggle">
+			Become Service Provider
+		</ion-toggle>	
+    </ion-list>
+	<ion-list>
+		<div class="list card" ng-controller="ProfileCtrl">
+			<div class="item item-icon-left">
+			  <i class="icon energized ion-iphone"></i>
+			  <i ng-click="viewNow()" ng-show="editIco" class="icon ion-edit" style="font-size: 19px; left: 90%;cursor:pointer;"></i>
+				Change Alternate Phone No.
+				<div style="margin:0px;margin-top:-20px;border-radius:15px;" class="list list-inset" ng-show="showBtn">
+					<div style="margin:0px;padding:0px 0px" class="item item-input">
+						<input type="tel" ng-model="data.phone" placeholder="Phone No" class="ng-pristine ng-valid ng-empty ng-touched profile-inp">
+						<i ng-click="closeNow()" class="icon ion-close profile-close"></i>
+						<button ng-click="login()" class="button button-block button-calm profile-btn">Save</button>
+					</div>
+				</div>
+			</div>
+			
+			<div  class="item item-icon-left">
+				<i class="icon energized ion-email"></i>
+				<i ng-click="eviewNow()" ng-show="eeditIco" class="icon ion-edit" style="font-size: 19px; left: 90%;cursor:pointer;"></i>
+				Change Your Email Address
+				<div style="margin:0px;margin-top:-20px;border-radius:15px;" class="list list-inset" ng-show="eshowBtn">
+					<div style="margin:0px;padding:0px 0px" class="item item-input">
+						<input type="email" ng-model="data.email" placeholder="Email" class="ng-pristine ng-valid ng-empty ng-touched profile-inp">
+						<i ng-click="ecloseNow()" class="icon ion-close profile-close" ></i>
+						<button ng-click="login()" class="button button-block button-calm profile-btn">Save</button>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div  class="item item-icon-left">
+				<i class="icon energized ion-lock-combination"></i>
+				<i ng-click="pviewNow()" ng-show="peditIco" class="icon ion-edit" style="font-size: 19px; left: 90%;cursor:pointer;"></i>
+				Change Your Password
+				<div style="margin:0px;margin-top:-20px;border-radius:15px;" class="list list-inset" ng-show="pshowBtn">
+					<div style="margin:0px;padding:0px 0px" class="item item-input">
+						<input type="password" ng-model="data.password" placeholder="Password" style="border: 1px solid rgb(242, 242, 242); border-radius: 15px 0px 0px 15px; padding-left: 5px;" class="ng-pristine ng-valid ng-empty ng-touched clear profile-inp">
+					</div>
+					<div style="margin:10px 0px;padding:0px 0px" class="item item-input">
+						<input type="password" ng-model="data.cpassword" placeholder="Confirm Password"  class="ng-pristine ng-valid ng-empty ng-touched clear profile-inp">
+						<i ng-click="pcloseNow()" class="icon ion-close profile-close"></i>
+						<button ng-click="login()" class="button button-block button-calm profile-btn" >Save</button>
+					</div>
+				</div>
+			</div>
+		 
+			<div ng-click="logoutUser()" class="item item-icon-left">
+			  <i class="icon energized ion-log-out"></i>
+			  Logout
+			</div>
+		</div>
+			
+    </ion-list>
+  </ion-content>
+</ion-view>

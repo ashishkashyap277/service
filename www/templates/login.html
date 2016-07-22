@@ -1,0 +1,22 @@
+<ion-view  view-title="My Service Login" name="login-view">
+    <ion-content class="padding" scroll="false">
+        <section  class="login-container">
+			<div class = "col header text-center">
+               <img src="./img/icon.png" class = "logo" />
+            </div>
+			<div class="list list-inset">
+				<label class="item item-input">
+					<input type="text" placeholder="Username" ng-model="data.username">
+				</label>
+				<label class="item item-input">
+					<input type="password" placeholder="Password" ng-model="data.password">
+				</label>
+			</div>
+			<button class="button button-block button-calm" ng-click="login()">Login</button>
+			
+			<div class = "col text-center">
+                Don't have an account? <strong><a href="#register">Register now!</a></strong>
+            </div>
+        </section>
+    </ion-content>
+</ion-view>
